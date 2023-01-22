@@ -1,0 +1,44 @@
+﻿@model IEnumerable<Dependency_Injection_1193719.user>; 
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <table class="table table-bordered table-responsive table-hover">
+        <tr>
+            <th>User</th>
+            <th>Movie</th>
+            <th>Status</th>
+        </tr>
+        @foreach (var d in Model)
+        {
+            <tr>
+                <td colspan="1" rowspan="3" width="300">@d.userName</td>
+                <tr>
+                    <td>@d.movies.ElementAt(0).Name</td>
+                    <td>@d.movies.ElementAt(0).status</td>
+                </tr>
+                <tr>
+                    <td>@d.movies.ElementAt(1).Name</td>
+                    <td>@d.movies.ElementAt(1).status</td>
+                </tr>
+            </tr>
+        }
+
+        @foreach (var d in Model)
+        {
+            <tr>
+                <td colspan="1" rowspan="3" width="300">@d.userName</td>
+                <tr>
+                    <td>@d.movies.ElementAt(0).Name</td>
+                    <td>@d.movies.ElementAt(0).status</td>
+                </tr>
+                <tr>
+                    <td>@d.movies.ElementAt(1).Name</td>
+                    <td>@d.movies.ElementAt(1).status</td>
+                </tr>
+            </tr>
+        }
+    </table>
+</div>
